@@ -15,7 +15,7 @@ class Updater(object):
 	def opendb(self):
 		cred = config.username+'/'+config.password+'@'+config.host+':'+config.port+'/'+config.sid
 		self.connection = cx_Oracle.connect(cred)
-		return conn
+		return self.connection
 
 	def query(self,SQL):
 		cursor = self.connection.cursor()
