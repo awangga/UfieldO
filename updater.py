@@ -20,9 +20,9 @@ class Updater(object):
 	def query(self,connection,SQL):
 		cursor = connection.cursor()
 		cursor.execute(SQL)
-		a = ''
+		a = str('')
 		for row in cursor:
-			a = a+row
+			a = a+str(row)
 		cursor.close()
 		return a
 
