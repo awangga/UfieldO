@@ -24,6 +24,9 @@ class Updater(object):
 
 	def printdata(self,curdat):
 		for row in curdat: print row
+	
+	def commit(self):
+		self.connection.commit()
 
 	def closedb(self):
 		self.connection.close()
