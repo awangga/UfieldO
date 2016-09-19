@@ -20,6 +20,7 @@ class Updater(object):
 	def query(self,connection,SQL):
 		cursor = connection.cursor()
 		cursor.execute(SQL)
+		a = ''
 		for row in cursor:
 			a = a+row
 		cursor.close()
