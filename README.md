@@ -1,4 +1,4 @@
-# Requrement
+# Requirement
 * python-pip
 * python-dev
 * cx_Oracle
