@@ -14,11 +14,11 @@ class Updater(object):
 
 	def opendb(self):
 		cred = config.username+'/'+config.password+'@'+config.host+':'+config.port+'/'+config.sid
-		conn = cx_Oracle.connect(cred)
+		self.connection = cx_Oracle.connect(cred)
 		return conn
 
-	def query(self,connection,SQL):
-		cursor = connection.cursor()
+	def query(self,SQL):
+		cursor = self.connection.cursor()
 		cursor.execute(SQL)
 		a = str('')
 		for row in cursor:
@@ -26,8 +26,8 @@ class Updater(object):
 		cursor.close()
 		return a
 
-	def closedb(self,connection):
-		connection.close()
+	def closedb(self):
+		self.connection.close()
 
 	
 
