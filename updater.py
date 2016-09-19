@@ -22,7 +22,7 @@ class Updater(object):
 		cursor.execute(SQL)
 		return cursor
 
-	def printdata(self,curdat)
+	def printdata(self,curdat):
 		for row in curdat: print row
 
 	def closedb(self):
