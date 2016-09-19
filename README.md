@@ -1,7 +1,8 @@
 # Requrement
-python-pip
-python-dev
-cx_Oracle
+* python-pip
+* python-dev
+* cx_Oracle
+
 ## How to Install
 
 ```sh
