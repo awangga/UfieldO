@@ -7,7 +7,7 @@
 ## How to Install
 
 ```sh
-$ sudo apt-get isntall python-pip python-dev
+$ sudo apt-get install python-pip python-dev
 $ pip install cx_Oracle
 ```
 
