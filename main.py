@@ -15,6 +15,7 @@ sqlu = "update T_APPS set LATEST_VERSION = '"+version+"' where PATH = '"+apppath
 u.query(sqlu)
 res = u.query(sqlget)
 u.printdata(res)
+u.commit()
 u.closedb()
 
 
