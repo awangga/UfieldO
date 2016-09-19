@@ -6,14 +6,15 @@ main.py application
 import updater
 u=updater.Updater()
 kon=u.opendb()
-sqlget = "select * from T_APPS where PATH = 'simpon.eo'"
-sqlu = "update T_APPS set LATEST_VERSION = '1.1' where PATH = 'simpon.eo'"
+apppath = raw_input("PATH : ")
+sqlget = "select * from T_APPS where PATH = '"+apppath+"'"
 res = u.query(sqlget)
-print res
-res = u.query(sqlu)
-print res
+u.printdata(res)
+version = raw_input("LATEST_VERSION : ")
+sqlu = "update T_APPS set LATEST_VERSION = '"+version+"' where PATH = '"+apppath+"'"
+u.query(sqlu)
 res = u.query(sqlget)
-print res
+u.printdata(res)
 u.closedb()
 
 
