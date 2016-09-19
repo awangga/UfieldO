@@ -20,11 +20,10 @@ class Updater(object):
 	def query(self,SQL):
 		cursor = self.connection.cursor()
 		cursor.execute(SQL)
-		a = str('')
-		for row in cursor:
-			a = a+str(row)
-		cursor.close()
-		return a
+		return cursor
+
+	def printdata(self,curdat)
+		for row in curdat: print row
 
 	def closedb(self):
 		self.connection.close()
