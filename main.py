@@ -16,10 +16,11 @@ u.printdata(res)
 set = raw_input(config.setfield+" : ")
 u.updatedata(key,set)
 
+u.commit()
+
 res = u.getdata(key)
 u.printdata(res)
 
-u.commit()
 u.closedb()
 
 
