@@ -1,5 +1,5 @@
 # UfieldO
-Simple script to update a field in a Oracle DBMS table.
+Simple script to update a field in Oracle DBMS table.
  
 ## Requirement
 * [Oracle instant client] (Basic & devel)
