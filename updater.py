@@ -25,6 +25,16 @@ class Updater(object):
 	def printdata(self,curdat):
 		for row in curdat: print row
 	
+	def getdata(self,key):
+		sql = "select * from "+config.table+" where "+config.keyfield+" = '"+key+"'"
+		res = self.query(sql)
+		return res
+
+	def updatedata(self,key,set):
+		sql = "update "+config.table+" set "+config.setfield+" = '"+set+"' where "+config.keyfield+" = '"+key+"'"
+		res = self.query(sql)
+		return res
+
 	def commit(self):
 		self.connection.commit()
 

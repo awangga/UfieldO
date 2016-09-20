@@ -12,3 +12,9 @@ host = "localhost"
 port = "1521"
 sid = "orcl"
 
+
+table = "T_APPS"
+keyfield = "PATH"
+setfield = "LATEST_VERSION"
+
+

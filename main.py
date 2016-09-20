@@ -4,17 +4,21 @@ main.py application
 """
 
 import updater
+import config
+
 u=updater.Updater()
 kon=u.opendb()
-apppath = raw_input("PATH : ")
-sqlget = "select * from T_APPS where PATH = '"+apppath+"'"
-res = u.query(sqlget)
+
+key = raw_input(config.keyfield+" : ")
+res = u.getdata(key)
 u.printdata(res)
-version = raw_input("LATEST_VERSION : ")
-sqlu = "update T_APPS set LATEST_VERSION = '"+version+"' where PATH = '"+apppath+"'"
-u.query(sqlu)
-res = u.query(sqlget)
+
+set = raw_input(config.setfield+" : ")
+u.updatedata(key,set)
+
+res = u.getdata(key)
 u.printdata(res)
+
 u.commit()
 u.closedb()
 
